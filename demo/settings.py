@@ -126,11 +126,15 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
-
+# STATICFILES_DIRS=[BASE_DIR,'static']
 
 #collect all static file in assets#
 #run a commend < python manage.py collectstatic >#
 STATIC_ROOT = os.path.join(BASE_DIR,'assets')
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 
 # Default primary key field type 
