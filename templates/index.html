@@ -35,7 +35,7 @@
 									<li><a href="about.html">About us</a></li>
 									<li><a href="#">Services</a></li>
 									<li><a href="news.html">News</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li><a href="user/register">register</a></li>
 								</ul>
 							</nav>
 							<div class="header_phone ml-auto">Call us: 00-56 445 678 33</div>
@@ -256,7 +256,11 @@
 						<div class="destination item">
 							<div class="destination_image">
 								<img src=" {{destin.img.url}} " alt="">
+
+								{%if destin.offer%}			
 								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
+								{%endif%}
+							
 							</div>
 							<div class="destination_content">
 								<div class="destination_title"><a href="destinations.html"> {{destin.name}} </a></div>
