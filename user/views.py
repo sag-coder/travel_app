@@ -4,21 +4,21 @@ from django.contrib.auth.models import User
 # Create your views here.
 def registration(request):
     
-    if request == "post" :
+    if request.method == 'POST':
         
-        # u_name = request.POST['name']
-        # u_email = request.POST['Email']
-        # u_password = request.POST['password'] 
+        
+        u_name = request.POST['name']
+        u_email = request.POST['Email']
+        u_password = request.POST['password'] 
 
-        # user = User.objects.create_user(username= u_name, email = u_email , password = u_password)
-        # user.save();
-
-        # print (u_name)
-
+        user = User.objects.create_user(username= u_name, email = u_email , password = u_password)
+        user.save();
+        
         return redirect ('/') 
     
     else:
-     return render(request, 'user_login.html')
+        return render(request, 'user_login.html') 
+        
 
 
 ##other process
